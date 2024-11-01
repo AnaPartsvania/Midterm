@@ -1,0 +1,7 @@
+<h2>{{title}}</h2>
+<div *ngFor="let user of users">
+    <div *ngIf="user.age > 20">
+        {{user.firstname}} {{user.lastname}} - age = {{user.age}}
+    </div>
+</div>
+<app-user (childUsersEmitter)="onChildUserReceived($event)"></app-user>
